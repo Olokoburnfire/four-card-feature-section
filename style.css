@@ -1,0 +1,133 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+/*### Primary*/
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+/*### Neutral:*/
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 15px;
+    font-family: 'poppins', sans-serif;
+    background: var(--Very-Light-Gray);
+
+}
+
+.description{
+    color: var(--Grayish-Blue);
+}
+
+header{
+    white-space: nowrap;
+}
+
+.top-container{
+    text-align: center;
+}
+
+.top-container #line-1{
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+}
+
+.top-container #line-2{
+    margin-top: -20px;
+    font-size: 2rem;
+    color: var(--Very-Dark-Blue);
+}
+
+.top-container .description{
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+.col{
+    position: relative;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 18px auto;
+    height: 200px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.col .icon{
+    position: absolute;
+    padding: 15px;
+    right: 0;
+    bottom: 0;
+}
+
+.title{
+    font-size: 1.3rem;
+    color: var(--Very-Dark-Blue);
+}
+
+.col::after{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    top:0;
+    left: 0;
+}
+
+.card-cyan::after{
+    background-color: var(--Cyan);
+}
+
+.card-red::after{
+    background-color: var(--Red);
+}
+
+.card-orange::after{
+    background-color: var(--Orange);
+}
+
+.card-blue::after{
+    background-color: var(--Blue);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (min-width:768px) {
+    #card-component{
+        display: flex;
+        align-items: center;
+    }
+    .col{
+        margin: 20px;
+    }
+}
